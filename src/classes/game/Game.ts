@@ -1,4 +1,5 @@
 import Board from "../board/Board";
+import Square from "../board/Square";
 import Bishop from "../pieces/Bishop";
 import King from "../pieces/King";
 import Knight from "../pieces/Knight";
@@ -9,9 +10,7 @@ import Rook from "../pieces/Rook";
 import Move from "./Move";
 
 export default class Game {
-  private init(): void {
-    const board = new Board();
-  }
+  private init(): void {}
   private initMoves(): void {}
 
   private initPieces(): Piece[] {

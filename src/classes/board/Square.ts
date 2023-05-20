@@ -3,8 +3,9 @@ import Piece from "../pieces/Piece";
 export default class Square {
   private color: string;
   private piece: Piece | null = null;
-  constructor(color: string) {
+  constructor(color: string, initialPiece: Piece | null = null) {
     this.color = color;
+    this.piece = initialPiece;
   }
 
   public occupy(piece: Piece): void {

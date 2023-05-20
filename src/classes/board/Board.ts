@@ -1,4 +1,6 @@
-export default class Board {
-    positions: 
-  constructor(config) {}
+export default class Board<T> {
+  positions: T;
+  constructor(configuredBoard: T) {
+    this.positions = configuredBoard;
+  }
 }
