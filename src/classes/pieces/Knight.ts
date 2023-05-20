@@ -2,9 +2,9 @@ import Move from "../game/Move";
 import Piece from "./Piece";
 
 export default class Knight extends Piece {
-  constructor(color: string) {
+  possibleMoves: Move[];
+  constructor(color: string, possibleMoves: Move[]) {
     super(color);
+    this.possibleMoves = possibleMoves;
   }
-
-  public makeMove(move: Move): void {}
 }
