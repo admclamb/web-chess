@@ -1,18 +1,6 @@
 :root {
-  --black-color: #000;
-  --white-color: #fff;
-}
-
-.board {
-  grid-template-columns: repeat(8, 1fr);
-}
-
-.black .square {
-  background-color: var(--black-color);
-}
-
-.white .square {
-  background-color: var(--white-color);
+  --black-color: #769655;
+  --white-color: #eeeed2;
 }
 
 .square {
@@ -24,4 +12,28 @@ body {
   min-height: 100vh;
   background-color: #0f172c;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 35rem;
+  height: 35rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: 100%;
+  width: 100%;
+}
+
+.black {
+  background-color: var(--black-color);
+}
+
+.white {
+  background-color: var(--white-color);
 }

@@ -3,9 +3,13 @@ import Piece from "../pieces/Piece";
 export default class Square {
   private color: string;
   private piece: Piece | null = null;
+  private squareElement: HTMLDivElement;
   constructor(color: string, initialPiece: Piece | null = null) {
     this.color = color;
     this.piece = initialPiece;
+    this.squareElement = document.createElement("div");
+    this.squareElement.classList.add(color);
+    this.squareElement.classList.add("square");
   }
 
   public occupy(piece: Piece): void {
@@ -30,5 +34,9 @@ export default class Square {
 
   public getPiece(): Piece | null {
     return this.piece;
+  }
+
+  public render(): HTMLDivElement {
+    return this.squareElement;
   }
 }
